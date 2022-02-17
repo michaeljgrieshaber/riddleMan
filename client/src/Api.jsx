@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-// console.log(airtableBase, airtableKey)
 
 const URL = `https://api.airtable.com/v0/${airtableBase}/Table%201?`;
 
