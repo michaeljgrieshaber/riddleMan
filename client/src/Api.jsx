@@ -28,6 +28,19 @@ export default function Api() {
     return <div>{x} letters</div>;
   }
 
+
+  
+  function match(e, answer) {
+    console.log(e)
+    console.log(answer)
+      if (e === answer) {
+        alert('correct')
+      }
+    }
+  
+
+
+
   return (
     <div>
       {riddles.map((riddle, id) => {
@@ -35,7 +48,21 @@ export default function Api() {
           <div key={id}>
             <div>{riddle.fields.Riddle}</div>
             {typeHere(riddle.fields.Answer.split("").length)}
-            <input></input>
+
+            <form>
+            <input
+              placeholder="your answer here"
+                // onChange={(e) => console.log(e.target.value)}
+                onChange={(e) => match(e.target.value,riddle.fields.Answer)}
+
+
+                // maxLength = {1}
+            
+            
+            
+            ></input>
+              {/* <button>Submit</button> */}
+              </form>
           </div>
         );
       })}
