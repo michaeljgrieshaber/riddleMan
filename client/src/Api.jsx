@@ -34,6 +34,7 @@ export default function Api() {
     console.log(answer)
       if (e === answer) {
         alert('correct!')
+        // sent a post request to the user and add a point
       } 
     }
   
@@ -51,7 +52,6 @@ export default function Api() {
                 type="text"
                 placeholder={ typeHere(riddle.fields.Answer.split("").length) }
                 onChange={(e) => match(e.target.value.toLowerCase(), riddle.fields.Answer)}
-                className={''}
                 maxLength = {typeHere(riddle.fields.Answer.split("").length)}
                 >
                 

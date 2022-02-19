@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div>
     <h1>Riddle Man</h1>
-      <br></br>
+      <hr></hr>
       </div>
   )
 }
