@@ -25,20 +25,18 @@ export default function Api() {
   }, []);
 
   function typeHere(x) {
-    return <div>{x} letters</div>;
+    return `${x} letters`
   }
 
 
   
   function match(e, answer) {
-    console.log(e)
     console.log(answer)
       if (e === answer) {
-        alert('correct')
-      }
+        alert('correct!')
+      } 
     }
   
-
 
 
   return (
@@ -47,22 +45,18 @@ export default function Api() {
         return (
           <div key={id}>
             <div>{riddle.fields.Riddle}</div>
-            {typeHere(riddle.fields.Answer.split("").length)}
 
-            <form>
-            <input
-              placeholder="your answer here"
-                // onChange={(e) => console.log(e.target.value)}
-                onChange={(e) => match(e.target.value,riddle.fields.Answer)}
-
-
+              <form>
+                <input
+                placeholder={ typeHere(riddle.fields.Answer.split("").length) }
+                onChange={(e) => match(e.target.value.toLowerCase(), riddle.fields.Answer)}
+                className={''}
                 // maxLength = {1}
-            
-            
-            
-            ></input>
-              {/* <button>Submit</button> */}
+                >
+                
+                </input>
               </form>
+              <br></br>
           </div>
         );
       })}
