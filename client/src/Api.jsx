@@ -47,11 +47,12 @@ export default function Api() {
             <div>{riddle.fields.Riddle}</div>
 
               <form>
-                <input
+              <input
+                type="text"
                 placeholder={ typeHere(riddle.fields.Answer.split("").length) }
                 onChange={(e) => match(e.target.value.toLowerCase(), riddle.fields.Answer)}
                 className={''}
-                // maxLength = {1}
+                maxLength = {typeHere(riddle.fields.Answer.split("").length)}
                 >
                 
                 </input>
