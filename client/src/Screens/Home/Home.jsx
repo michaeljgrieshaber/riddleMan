@@ -13,7 +13,7 @@ const config = {
   },
 };
 
-export default function Api() {
+export default function Home() {
   const [riddles, setRiddles] = useState([]);
 
   useEffect(() => {
